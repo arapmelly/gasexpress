@@ -22,11 +22,11 @@
                   </li> 
                
                   <li>
-                    <a href="{{ URL::to('salesorders') }}"><i class="glyphicon glyphicon-list fa-fw"></i> Sales Orders</a>
+                    <a href="{{ URL::to('orders') }}"><i class="glyphicon glyphicon-list fa-fw"></i> Sales Orders</a>
                   </li>
                         
                   <li>
-                    <a href="{{ URL::to('purchaseorders') }}"><i class="glyphicon glyphicon-list fa-fw"></i>  Purchase Orders</a>
+                    <a href="{{ URL::to('purchases') }}"><i class="glyphicon glyphicon-list fa-fw"></i>  Purchase Orders</a>
                   </li>
                 
                   

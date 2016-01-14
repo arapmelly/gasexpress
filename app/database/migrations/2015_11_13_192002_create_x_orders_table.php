@@ -14,14 +14,15 @@ class CreateXOrdersTable extends Migration {
 	{
 		Schema::create('orders', function(Blueprint $table)
 		{
-			$table->increments('id');
-			$table->integer('product_id')->unsigned()->index('orders_product_id_index');
-			$table->date('order_date')->nullable();
-			$table->string('customer_name')->nullable();
-			$table->string('sacco')->nullable();
-			$table->string('customer_phone')->nullable();
-			$table->string('customer_number')->nullable();
-			$table->string('status')->default('new');
+			$table->increments('Order_id');
+			$table->date('date');
+			$table->string('customer')->nullable();
+			$table->string('status');
+			$table->float('total_amount',15,2)->default('0.00');
+			$table->float('discount',15,2)->default('0.00');
+			$table->float('payable_amount',15,2)->default('0.00');
+			$table->float('payment',15,2)->default('0.00');
+			$table->float('balance',15,2)->default('0.00');
 			$table->timestamps();
 		});
 	}
