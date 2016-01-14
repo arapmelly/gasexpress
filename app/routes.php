@@ -1877,11 +1877,14 @@ Route::get('shop', 'ProductsController@shop');
 * orders controllers
 */
 Route::resource('orders', 'OrdersController');
-Route::post('orders/update/{id}', 'OrdersControler@update');
-Route::get('orders/edit/{id}', 'OrdersControler@edit');
-Route::get('orders/delete/{id}', 'OrdersControler@destroy');
+Route::post('orders/update/{id}', 'OrdersController@update');
+Route::get('orders/edit/{Order_id}', 'OrdersController@edit');
+Route::get('orders/delete/{id}', 'OrdersController@destroy');
 
-
+Route::resource('purchases', 'PurchasesController'); 
+Route::post('purchases/update/{id}', 'PurchasesController@update');
+Route::get('purchases/edit/{id}', 'PurchasesController@edit');
+Route::get('purchases/delete/{id}', 'PurchasesController@destroy');
 
 
 Route::get('savings', function(){
